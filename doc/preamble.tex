@@ -109,3 +109,28 @@
 }
 {th}
 
+%================================
+% THEOREM
+%================================
+\definecolor{theorembg}{HTML}{F2F2F9}
+\definecolor{theoremfr}{HTML}{00007B}
+
+\tcbuselibrary{theorems,skins,hooks}
+\newtcbtheorem[number within=section]{Theorem}{Theorem}
+{%
+	enhanced,
+	breakable,
+	colback = theorembg,
+	frame hidden,
+	boxrule = 0sp,
+	borderline west = {2pt}{0pt}{theoremfr},
+	sharp corners,
+	detach title,
+	before upper = \tcbtitle\par\smallskip,
+	coltitle = theoremfr,
+	fonttitle = \bfseries\sffamily,
+	description font = \mdseries,
+	separator sign none,
+	segmentation style={solid, theoremfr},
+}
+{th}
