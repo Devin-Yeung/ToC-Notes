@@ -87,25 +87,25 @@
 %================================
 % PROPOSITION
 %================================
-\definecolor{propbg}{HTML}{f2fbfc}
-\definecolor{propfr}{HTML}{191971}
+\definecolor{defbg}{HTML}{f2fbfc}
+\definecolor{deffr}{HTML}{191971}
 \tcbuselibrary{theorems,skins,hooks}
-\newtcbtheorem[number within=section]{Prop}{Proposition}
+\newtcbtheorem[number within=section]{Def}{Definition}
 {%
 	enhanced,
 	breakable,
-	colback = propbg,
+	colback = defbg,
 	frame hidden,
 	boxrule = 0sp,
-	borderline west = {2pt}{0pt}{propfr},
+	borderline west = {2pt}{0pt}{deffr},
 	sharp corners,
 	detach title,
 	before upper = \tcbtitle\par\smallskip,
-	coltitle = propfr,
+	coltitle = deffr,
 	fonttitle = \bfseries\sffamily,
 	description font = \mdseries,
 	separator sign none,
-	segmentation style={solid, propfr},
+	segmentation style={solid, deffr},
 }
 {th}
 
