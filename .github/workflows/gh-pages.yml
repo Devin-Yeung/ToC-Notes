@@ -16,6 +16,8 @@ jobs:
       - uses: actions/checkout@v3
         with:
           submodules: true
+      - name: Prebuild action
+        run: sed -i 's/\\input{doc\/mwe.tex}//' theory-of-computation-notes.tex
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@v3
         with:
