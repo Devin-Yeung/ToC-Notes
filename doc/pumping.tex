@@ -1,0 +1,43 @@
+\section{Pumping Lemma}
+
+\begin{Lemma}{Pumping Lemma}{}
+	If $A$ is a reuglar language, then there is a positive constant $p$
+	such that every string $w \in A$ of length at least $p$
+	can be written as $w = xyz$ satisfying the following conditions
+	\begin{enumerate}
+		\item For each $i \geqslant 0, xy^{i}z \in A$
+		\item $|y| > 0$
+		\item $|xy| \leqslant p$
+	\end{enumerate}
+	where $p$ is the pumping length,
+	$y^{i}$ means that $i$ copies of $y$ are concatenated together, and $y^0$ equals $\epsilon$
+
+	Note: pumping lemma only state that $|y| > 0$, that is $|x|$ and $|z|$ can be $0$
+\end{Lemma}
+
+To prove the language A is not regular,
+let's proof by contradiction.
+\begin{enumerate}
+	\item Assume $A$ is regular
+	\item Construct a string $w \in A$ of length $|w| \geqslant p$
+\end{enumerate}
+
+\begin{Example}{}{}
+	Let $A$ be the language $\{0^{n}1^{n} | n \geqslant 0\}$. Proof: $A$ is not regular.
+\end{Example}
+
+Proof by contradiction: We use the pumping lemma to prove that $A$ is not regular.
+Assume that $A$ is regular. Let $p$ be the pumping length given by the pumping lemma. \textbf{Choose $s$ to be the string $0^p1^p$}.
+
+Because $s$ is a member of $A$ and $s$ has length more than $p$,
+the pumping lemma guarantees that $s$ can be split into three pieces,
+$s = xyz$, where for \textbf{any} $i \geqslant 0$ the string $xy^{i}z$ is in A.
+\begin{enumerate}
+	\item The string $y$ consists only of $0$s.
+	      Then string $xyyz \notin A$, which violating the pumping lemma.
+	\item The string $y$ consists only of $1$s. This case also gives a contradiction since $|xy| > p$
+	\item The string $y$ consists of both $0$s and $1$s.
+	      In this case, the string $xyyz$ may have the same number of $0$s and $1$s, but they will be out of order with some $1$s before $0$s.
+\end{enumerate}
+Thus a contradiction is unavoidable if we make the assumption that A is reg- ular, so A is not regular.
+Note that we can simplify this argument by applying $|xy| \leqslant p$ of the pumping lemma to eliminate cases 2 and 3.
