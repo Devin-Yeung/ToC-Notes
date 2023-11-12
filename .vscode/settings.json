@@ -21,6 +21,15 @@
   "latex-workshop.view.pdf.internal.synctex.keybinding": "ctrl-click",
   // Ignoring the badbox warning
   "latex-workshop.message.badbox.show": false,
+  // Make the result of fmt consistent with latexindent
+  // Also redirect the indent.log to %OUTDIR%
+  // Related issue: https://github.com/James-Yu/LaTeX-Workshop/issues/4019
+  "latex-workshop.latexindent.args": [
+    "-c",
+    "%OUTDIR%/",
+    "%TMPFILE%",
+    "-y=defaultIndent:'\t'"
+  ],
   // LaTeX ToolChains
   "latex-workshop.latex.tools": [
     {
