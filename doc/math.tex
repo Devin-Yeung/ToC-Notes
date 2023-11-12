@@ -5,29 +5,29 @@
 \begin{Definition}{function}
 	A function $f$ from $A$ to $B$ is a subset of $A \times B$ which satisfied:
 	\begin{equation}
-	\begin{aligned}
-			&\forall x (x \in A \rightarrow \exists y (y \in B \land (x,y) \in f)) \\
-			&(((x_1, y_1) \in B \land (x_1, y_2) \in B) \rightarrow y_1 = y_2)
-	\end{aligned}
-	\end{equation}	
+		\begin{aligned}
+			 & \forall x (x \in A \rightarrow \exists y (y \in B \land (x,y) \in f)) \\
+			 & (((x_1, y_1) \in B \land (x_1, y_2) \in B) \rightarrow y_1 = y_2)
+		\end{aligned}
+	\end{equation}
 \end{Definition}
 
 Noted that for an arbitrary $b \in B$(co-domain), there may not exist a corresponding $a \in A$(domain), but for every $a \in A$(domain), there must exist a corresponding $b \in B$(co-domain)
 
 \begin{Definition}{injection}
-A function $f$ is said to be one-to-one, or an injection, if and only if $f (a) = f (b)$ implies that $a = b$ for all $a$ and $b$ in the domain of $f$. A function is said to be injective if it is one-to-one.
-\[ ((f(a) = f(b)) \Rightarrow (a = b)) \Leftrightarrow f \; \text{is injection} \]
+	A function $f$ is said to be one-to-one, or an injection, if and only if $f (a) = f (b)$ implies that $a = b$ for all $a$ and $b$ in the domain of $f$. A function is said to be injective if it is one-to-one.
+	\[ ((f(a) = f(b)) \Rightarrow (a = b)) \Leftrightarrow f \; \text{is injection} \]
 \end{Definition}
 
 
 \begin{Definition}{surjection}
-A function $f$ from $A$ to $B$ is called onto, or a \textbf{\textit{surjection}}, if and only if for every element $b \in B$ there is an element $a \in A$ with $f(a) = b$. A function $f$ is called surjective if it is onto.
-\[ \forall b \in B \; \exists a \in A (f(a) = b) \Leftrightarrow f \; \text{is surjection} \]
+	A function $f$ from $A$ to $B$ is called onto, or a \textbf{\textit{surjection}}, if and only if for every element $b \in B$ there is an element $a \in A$ with $f(a) = b$. A function $f$ is called surjective if it is onto.
+	\[ \forall b \in B \; \exists a \in A (f(a) = b) \Leftrightarrow f \; \text{is surjection} \]
 \end{Definition}
 
 
 \begin{Definition}{bijection}
-The function $f$ is a one-to-one correspondence, or a \textbf{\textit{bijection}},
-if it is both one-to-one and onto. We also say that such a function is bijective.
+	The function $f$ is a one-to-one correspondence, or a \textbf{\textit{bijection}},
+	if it is both one-to-one and onto. We also say that such a function is bijective.
 \end{Definition}
 
