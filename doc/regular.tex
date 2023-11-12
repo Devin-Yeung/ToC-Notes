@@ -36,3 +36,26 @@
 		E(R) = \bigcup_{q \in R} E(q)
 	\]
 \end{Definition}
+
+\subsection{Properties}
+
+\begin{Theorem}{Closure}{}
+	Regular language is closed under union, concatenation, and star.
+\end{Theorem}
+
+\subsection{NFA-Regular Expression Equivalence}
+
+\begin{Theorem}{}{}
+	Regular expressions are equivalent to finite automata.
+\end{Theorem}
+
+\subsubsection{NFA to Regular Expression Conversion}
+The conversion requires \textbf{generalized NFA}, which is a special type of NFA:
+\begin{itemize}
+	\item There is only one start state and only one final state.
+	\item The start state is different from the final state.
+	\item The transition function is $\delta: (Q \setminus \{ q_f \}) \times (Q \setminus \{ q_0 \}) \to \mathcal{R}$. In other words, the label of each transition is a regular expression (instead of a symbol for NFA).
+	\item Suppose $\delta(a, b) = \mathcal{R}$, it means transition from $a$ to $b$ requires $\mathcal{R}$.
+	\item If the generalized NFA has only two states - $q_0$ and $q_f$,
+	      then the label on the transition is the regular expression for the language.
+\end{itemize}
