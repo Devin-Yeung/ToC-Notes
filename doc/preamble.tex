@@ -159,3 +159,31 @@
 	,description delimiters parenthesis
 }
 {ex}
+
+\definecolor{lemmabg}{HTML}{FFFAF8}
+\definecolor{lemmafr}{HTML}{983b0f}
+
+
+%================================
+% LEMMA
+%================================
+
+\tcbuselibrary{theorems,skins,hooks}
+\newtcbtheorem[number within=section]{Lemma}{Lemma}
+{%
+	enhanced,
+	breakable,
+	colback = lemmabg,
+	frame hidden,
+	boxrule = 0sp,
+	borderline west = {2pt}{0pt}{lemmafr},
+	sharp corners,
+	detach title,
+	before upper = \tcbtitle\par\smallskip,
+	coltitle = lemmafr,
+	fonttitle = \bfseries\sffamily,
+	description font = \mdseries,
+	separator sign none,
+	segmentation style={solid, lemmafr},
+}
+{th}
