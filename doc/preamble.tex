@@ -134,3 +134,28 @@
 	segmentation style={solid, theoremfr},
 }
 {th}
+
+\definecolor{examplebg}{HTML}{F2FBF8}
+\definecolor{examplefr}{HTML}{88D6D1}
+\definecolor{exampleti}{HTML}{2A7F7F}
+
+%================================
+% EXAMPLE BOX
+%================================
+
+\newtcbtheorem[number within=section]{Example}{Example}
+{%
+	colback = examplebg
+	,breakable
+	,colframe = examplefr
+	,coltitle = exampleti
+	,boxrule = 1pt
+	,sharp corners
+	,detach title
+	,before upper=\tcbtitle\par\smallskip
+	,fonttitle = \bfseries
+	,description font = \mdseries
+	,separator sign none
+	,description delimiters parenthesis
+}
+{ex}
