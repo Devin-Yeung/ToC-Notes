@@ -8,3 +8,16 @@
 		\item $F \subseteq Q$ is the set of accept states.
 	\end{enumerate}
 \end{Definition}
+
+\subsection{Equivalence}
+\begin{Definition}{$\epsilon$-closure}{}
+	Let $N = (Q, \Sigma_{\epsilon}, \delta, q_0, F)$ be an NFA$_{\epsilon}$.
+	The $\epsilon$-closure of a state $q$, denoted as $E(q)$ is:
+	\[
+		E(q) = \{ q \} \cup \delta(q, \epsilon) \cup \delta(\delta(q, \epsilon), \epsilon) \cup \cdots
+	\]
+	Let $R$ be a set of states for a given NFA. The $\epsilon$-closure of $R$ is
+	\[
+		E(R) = \bigcup_{q \in R} E(q)
+	\]
+\end{Definition}
