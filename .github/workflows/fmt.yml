@@ -26,7 +26,7 @@ jobs:
         run: npm install -g bibtex-tidy
       - name: Run fomatter
         run: |
-           latexindent -w *.tex
+           latexindent -w **/*.tex
            bibtex-tidy ref.bib
       - uses: EndBug/add-and-commit@v9
         with:
