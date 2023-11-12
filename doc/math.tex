@@ -31,3 +31,40 @@ Noted that for an arbitrary $b \in B$(co-domain), there may not exist a correspo
 	if it is both one-to-one and onto. We also say that such a function is bijective.
 \end{Definition}
 
+
+\subsection{Countability}
+
+\begin{Definition}{}{}
+	Given two sets $A$ and $B$, we say $A$ has the same cardinality as $B$ if there exists a bijection $f : A \to B$. This is usually denoted by $|A| = |B|$.
+\end{Definition}
+
+\begin{Definition}{Countable}{}
+	A set $A$ is said to be {\bfseries \itshape countably infinite } if $|A| = |\mathbb{N}|$, and simply countable if $|A| \leqslant |\mathbb{N}|$
+\end{Definition}
+
+\begin{Example}{}{}
+	Proof $A = \{ \text{all positive integers} \}$ is infinite countable
+\end{Example}
+Proof: Simply construct a bijection: $f: \mathbb{N} \to \mathbb{A}$ given by $f(n) = n + 1$.
+
+\begin{Example}{}{}
+	Proof $\mathbb{Z}$ is infinite countable
+\end{Example}
+Proof: Simply construct a bijection: $f: \mathbb{N} \to \mathbb{Z}$, where:
+\[
+	f(n) = \begin{dcases}
+		f(1) = 0                              \\
+		f(n) = \dfrac{n}{2}, n \text{ is odd} \\
+		f(n) = -\dfrac{n - 1}{2}, n \text{ is odd}
+	\end{dcases}
+\]
+
+\begin{Example}{}{}
+	Proof $\mathbb{N} \times \mathbb{N}$ is infinite countable
+\end{Example}
+Proof: Construct a bijection using Cantor Pairing function,
+which is a bijection: $f: \mathbb{N} \times \mathbb{N} \to \mathbb{N}$, where:
+\[ f(x, y) = \dfrac{1}{2} (x + y)(x + y + 1) + y \]
+without loss of generality, $\mathbb{N}^n$ is also infinite countable,
+we can construct the bijection for $n > 2$
+\[ \pi^{(n)} (k_{1},\ldots ,k_{n-1},k_{n}) = \pi (\pi^{(n-1)} (k_{1}, \ldots, k_{n-1}), k_{n}) \]
