@@ -2,11 +2,11 @@ permissions:
   contents: write
 on:
   workflow_dispatch:
-  push:
-    branches: [ master ]
-    paths:
-      - '**/*.tex'
-      - '**/*.bib'
+  # push:
+  #   branches: [ master ]
+  #   paths:
+  #     - '**/*.tex'
+  #     - '**/*.bib'
 concurrency:
   group: ${{ github.workflow }}-${{ github.head_ref || github.run_id }}
   cancel-in-progress: true
